@@ -9,10 +9,26 @@ body {
   height: 100%;
   text-align: center;
   font-size: 5em;
+  margin-top: 3em;
 }
 </style>
 </head>
 <body>
-  <input disabled type="text" id="yes" value="Yes. Always." />
+  <div type="text" id="yes">Yes. Always.</div>
+
+<script>
+const responses = [
+  'Yes. Always.',
+  'Anything you\'ve made is beautiful.',
+  'Of course!',
+  'Your code is beautiful.',
+  'Don\'t let anyone tell you your code isn\'t beautiful.',
+  'Beautiful!',
+  'This is absolutely beautiful!',
+  'Your code is very beautiful.',
+];
+const text = document.getElementById('yes');
+text.textContent = responses[Math.floor(Math.random() * responses.length)];
+</script>
 </body>
 
